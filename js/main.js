@@ -17,8 +17,10 @@ function calcularDNI(){
     }else{
         resultado = (valor % numeroDivisor);
 
-    let total = "DNI: "+valor+arrayLetras[resultado];
+    let total = valor + "-" + arrayLetras[resultado];
     result.innerHTML = total;
+    let cancelar = document.getElementById('cancelar');
+    cancelar.src = 'img/cancelar.png';
     }
     
     
