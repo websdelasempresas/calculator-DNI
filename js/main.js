@@ -1,5 +1,5 @@
 
-
+let cancelar = document.getElementById('cancelar');
 function calcularDNI(){
     let id = document.getElementById('dni');
     let result = document.getElementById('resultado');
@@ -12,21 +12,27 @@ function calcularDNI(){
     let numeroDivisor = 23;
     if(tamano > numMaxDNI || tamano < numMaxDNI){
         alert('Por favor introduce un codigo de 8 numeros');
-        id.value = " ";
+        id.value = "";
 
     }else{
         resultado = (valor % numeroDivisor);
 
     let total = valor + "-" + arrayLetras[resultado];
     result.innerHTML = total;
-    let cancelar = document.getElementById('cancelar');
+    
     cancelar.src = 'img/cancelar.png';
     }
     
-    
-    
 }
 
+function borrarDNI(){
+    let DNI = document.getElementById('dni');
+    DNI.value = "";
+    cancelar.hidden();
+    
+
+
+}
 
 
 
