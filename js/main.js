@@ -1,10 +1,11 @@
 
-let cancelar = document.getElementById('cancelar');
-function calcularDNI(){
     let id = document.getElementById('dni');
+    let cancelar = document.getElementById('cancelar');
     let result = document.getElementById('resultado');
+    let conta=0;
+function calcularDNI(){
+
     let valor = id.value;
-         console.log(valor);
     let tamano = valor.length;
     let arrayLetras= ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
     let resultado;
@@ -17,18 +18,25 @@ function calcularDNI(){
     }else{
         resultado = (valor % numeroDivisor);
 
+            if(conta>0){
+                document.getElementById('resultado').style.visibility='visible';
+            }
     let total = valor + "-" + arrayLetras[resultado];
     result.innerHTML = total;
-    
     cancelar.src = 'img/cancelar.png';
     }
     
 }
 
 function borrarDNI(){
+    conta++;
     let DNI = document.getElementById('dni');
+
     DNI.value = "";
-    cancelar.hidden();
+    result.style.visibility='hidden';
+    
+    
+
     
 
 
