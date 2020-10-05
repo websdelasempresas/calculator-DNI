@@ -18,7 +18,7 @@ function calcularDNI() {
 
     if (tamano === numMaxDNI) {
         resultado = (valor % numeroDivisor);
-        if (resultado > 0) {
+        if (resultado >= 0 && resultado <= 23) {
             if (conta > 0) {
                 result.style.visibility = 'visible';
                 cancelar.style.visibility = 'visible';
@@ -50,6 +50,9 @@ function borrarDNI() {
 
 
 function error() {
+    if (result.style.visibility = 'visible') {
+        result.style.visibility = 'hidden';
+    }
     alert("Introduce un dni de 8 digitos sin la letra (;");
     id.value = "";
 }
