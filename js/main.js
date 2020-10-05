@@ -29,9 +29,10 @@ function calcularDNI() {
             cancelar.src = 'img/cancelar.png';
 
         } else {
-            alert("Introduce un dni de 8 digitos sin la letra (;");
-            id.value = "";
+            error()
         }
+    } else {
+        error();
     }
 
 }
@@ -45,12 +46,10 @@ function borrarDNI() {
     result.style.visibility = 'hidden';
     cancelar.style.visibility = 'hidden';
 
-
-
-
-
-
 }
 
 
-
+function error() {
+    alert("Introduce un dni de 8 digitos sin la letra (;");
+    id.value = "";
+}
