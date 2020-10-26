@@ -4,6 +4,10 @@ let cancelar = document.getElementById('cancelar');
 let result = document.getElementById('resultado');
 let conta = 0;
 let contaCancelar = 0;
+
+
+document.getElementById('calcular').onclick = calcularDNI;
+document.getElementById('cancelar').onclick = borrarDNI;
 function calcularDNI() {
 
     let valor = id.value;
